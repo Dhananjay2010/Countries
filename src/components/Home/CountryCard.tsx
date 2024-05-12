@@ -23,12 +23,35 @@ const CountryCard: React.FC<CountryCardProps> = ({
   };
 
   const handleCardClick = (countryData): void => {
-    const { name, capital, region, population, flags, borders, } = countryData || {}
-    setSelectedCountry(countryData);
+    const {
+      name,
+      tld,
+      subregion,
+      currencies,
+      capital,
+      region,
+      population,
+      flags,
+      borders,
+      languages,
+    } = countryData || {};
+    setSelectedCountry({
+      name,
+      languages,
+      capital,
+      region,
+      population,
+      flags,
+      borders,
+      currencies,
+      subregion,
+      tld,
+    });
   };
 
   return (
     <div
+      key={official_name}
       className="flex flex-col card-cont"
       onClick={() => handleCardClick(countryData)}
     >

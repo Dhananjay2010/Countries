@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
 import { renderObj } from "../../utils/RenderObj";
+import CountryDetails from "./CountryDetails";
 const Countries: React.FC = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -23,18 +24,25 @@ const Countries: React.FC = () => {
 
   return (
     <>
-      <div className="all_container">
-        <div className="flex flex-wrap countries_container">
-          {renderObj.map((country) => {
-            return (
-              <CountryCard
-                countryData={country}
-                setSelectedCountry={setSelectedCountry}
-              />
-            );
-          })}
+      {!selectedCountry ? (
+        <div className="all_container">
+          <div className="flex flex-wrap countries_container">
+            {renderObj.map((country) => {
+              return (
+                <CountryCard
+                  countryData={country}
+                  setSelectedCountry={setSelectedCountry}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
+      ) : (
+        <CountryDetails
+          countryData={selectedCountry}
+          setSelectedCountry={setSelectedCountry}
+        />
+      )}
     </>
   );
 };
