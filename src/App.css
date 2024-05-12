@@ -1,38 +1,78 @@
 .App {
   text-align: center;
+  background: hsl(0, 0%, 98%);
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-col {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.countries_container {
+  gap: 20px;
+  row-gap: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.p-10 {
+  padding: 10px;
+}
+
+.text-600 {
+  font-weight: 600;
+}
+
+.text-300 {
+  font-weight: 300;
+}
+
+.leading-24 {
+  line-height: 24px;
+}
+
+.card_subtext {
+  margin-left: 3px;
+}
+
+.all_container {
+  padding: 20px 60px 20px 60px;
+}
+
+.card_country_detail {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.card-cont {
+  width: 264px;
+  height: 336px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card_img_cont {
+  height: 160px;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card_country_name {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 10px;
 }
